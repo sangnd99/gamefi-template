@@ -1,0 +1,119 @@
+@use "mixin" as *;
+
+.container {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 99;
+  width: 1170px;
+  padding: 50px;
+  background-size: cover !important;
+  height: 315px;
+  @include responsive(desktop) {
+    position: static;
+    transform: translateX(0);
+    width: 100%;
+    height: auto;
+  }
+  @include responsive(laptop) {
+    padding: 50px 15px;
+  }
+}
+
+.corner-top-left,
+.corner-bottom-right {
+  position: absolute;
+  z-index: -1;
+}
+
+.corner-top-left {
+  top: 0;
+  left: 0;
+}
+
+.corner-bottom-right {
+  bottom: 0;
+  right: 0;
+  transform: rotate(180deg);
+}
+
+.context {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  margin-bottom: 50px;
+  @include responsive(laptop) {
+    @include gridCols(1);
+  }
+}
+
+.left-section {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 20px;
+  @include responsive(laptop) {
+    @include gridCols(1);
+    place-items: center;
+    text-align: center;
+  }
+  &__title {
+    font-size: 30px;
+    font-family: var(--style-font-family);
+    color: var(--white);
+    @include responsive(mobile) {
+      font-size: 26px;
+    }
+    &--highlight {
+      color: var(--primary);
+    }
+  }
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  row-gap: 20px;
+}
+
+.description {
+  color: var(--text);
+}
+
+.right-section {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  @include responsive(laptop) {
+    margin-top: 50px;
+    align-items: center;
+  }
+  &__timer {
+    font-family: var(--style-font-family);
+    font-size: 30px;
+    display: grid;
+    @include gridCols(4);
+    gap: 40px;
+    color: var(--white);
+    @include responsive(mobile) {
+      font-size: 26px;
+      gap: 15px;
+    }
+    span {
+      font-size: var(--text-size);
+    }
+  }
+}
+
+.information {
+  display: grid;
+  place-items: center;
+  color: var(--white);
+  font-family: var(--style-font-family);
+  margin-bottom: 20px;
+  @include gridCols(3);
+  @include responsive(laptop) {
+    @include gridCols(1);
+    place-items: start;
+    gap: 20px;
+  }
+}

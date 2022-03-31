@@ -1,0 +1,54 @@
+@use "mixin" as *;
+
+.wrapper {
+  position: relative;
+  background: var(--secondary);
+  padding: 100px 0;
+}
+
+.container {
+  display: grid;
+  @include gridCols(2);
+  @include responsive(laptop) {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    gap: 50px;
+  }
+}
+
+.description {
+  display: flex;
+  align-items: center;
+}
+
+.text {
+  margin-top: 30px;
+  color: var(--text);
+  font-size: var(--text-size);
+  line-height: 1.7;
+}
+
+.type {
+  display: grid;
+  @include gridCols(2);
+  @include responsive(mobile) {
+    @include gridCols(1);
+    margin-top: 20px;
+  }
+  &__list {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    margin-top: 20px;
+    @include responsive(mobile) {
+      margin-top: 10px;
+    }
+  }
+  &__item {
+    display: flex;
+    column-gap: 15px;
+    color: var(--white);
+    font-size: var(--text-size);
+  }
+}

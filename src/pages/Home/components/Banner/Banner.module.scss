@@ -1,0 +1,44 @@
+@use "mixin" as *;
+
+.container {
+  position: relative;
+}
+
+.wrapper {
+  height: 700px;
+  width: 100%;
+  background-color: var(--secondary);
+  background-size: cover !important;
+  background-position: center !important;
+  @include center;
+}
+
+.introduce {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: var(--white);
+  text-align: center;
+}
+
+.heading {
+  font-size: var(--text-3xl);
+  font-family: var(--style-font-family);
+}
+
+.description {
+  font-size: var(--text-xl);
+  margin-top: 15px;
+  margin-bottom: 50px;
+}
+
+.pagination-desktop {
+  @include responsive(laptop) {
+    display: none;
+  }
+}
+
+.custom-pagination {
+  position: absolute;
+  bottom: 0;
+}

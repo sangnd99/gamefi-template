@@ -1,0 +1,19 @@
+@use "mixin" as *;
+
+.color {
+  color: var(--tertiary) !important;
+}
+
+.container {
+  @include center;
+  width: max-content;
+  column-gap: 10px;
+  color: var(--white);
+  font-family: var(--style-font-family);
+  font-size: var(--text-size);
+  white-space: nowrap;
+}
+
+.rotate {
+  transform: rotate(180deg) scaleY(-1);
+}

@@ -1,0 +1,33 @@
+@use "mixin" as *;
+
+.wrapper {
+  position: relative;
+  background: var(--secondary);
+  padding: 100px 0;
+  background-size: cover !important;
+  z-index: 0;
+}
+
+.top-left,
+.bottom-right {
+  position: absolute;
+  width: 600px;
+  z-index: -1;
+  @include responsive(laptop) {
+    width: 400px;
+  }
+  @include responsive(mobile) {
+    width: 250px;
+  }
+}
+
+.top-left {
+  top: 0;
+  left: 0;
+}
+
+.bottom-right {
+  bottom: 0;
+  right: 0;
+  transform: rotate(180deg);
+}

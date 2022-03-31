@@ -1,0 +1,92 @@
+@use "mixin" as *;
+
+.tokenomics,
+.roadmaps {
+  width: 100%;
+}
+
+.infomation {
+  width: 100%;
+  margin-top: 50px;
+}
+
+.achieve-wrapper {
+  display: grid;
+  @include gridCols(4);
+  margin-top: 70px;
+  @include responsive(tablet) {
+    @include gridCols(2);
+    gap: 30px;
+  }
+}
+
+.achieve {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  font-family: var(--style-font-family);
+  &__ammount {
+    font-size: var(--text-2xl);
+    color: var(--tertiary);
+  }
+  &__text {
+    font-size: var(--text-size);
+    color: var(--white);
+  }
+}
+
+.roadmaps {
+  margin-top: 130px !important;
+}
+
+.roadmap-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 20px;
+  @include responsive(laptop) {
+    align-items: flex-start;
+    flex-direction: column;
+    row-gap: 30px;
+  }
+}
+
+.action {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  @include responsive(mobile) {
+    justify-content: space-between;
+  }
+}
+
+.navigation {
+  display: flex;
+  column-gap: 30px;
+  margin-left: 50px;
+  &__button {
+    width: 29px;
+    cursor: pointer;
+    height: max-content;
+    @include center;
+    @include responsive(mobile) {
+      width: 20px;
+    }
+    & img {
+      width: 100%;
+    }
+  }
+}
+
+.rotate {
+  transform: rotate(180deg);
+}
+
+.years {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  @include responsive(mobile) {
+    flex-wrap: wrap;
+  }
+}

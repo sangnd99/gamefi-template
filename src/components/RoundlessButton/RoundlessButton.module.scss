@@ -1,0 +1,37 @@
+@use "mixin" as *;
+
+.container {
+  height: 50px;
+  font-family: var(--style-font-family);
+  color: var(--white);
+  @include center;
+  &:hover {
+    transition-duration: 0.2s;
+    filter: brightness(0.8);
+  }
+}
+
+.border {
+  border: 2px solid var(--border);
+}
+
+.border-white {
+  border: 2px solid var(--white);
+}
+
+.fill-primary {
+  background: var(--primary);
+}
+
+.fill-tertiary {
+  background: var(--tertiary);
+  color: var(--secondary);
+}
+
+.sm {
+  width: 168px;
+}
+
+.md {
+  width: 256px;
+}

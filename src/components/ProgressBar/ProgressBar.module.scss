@@ -1,0 +1,27 @@
+.container {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 5px;
+  background: var(--swiper-pagination);
+  gap: 2px;
+}
+
+.element {
+  display: inline-block;
+  height: 10px;
+  background: rgba(255, 255, 255, 0.1);
+  transform: skew(20deg);
+}
+
+.active {
+  background: var(--primary);
+}
+
+.width-desktop {
+  width: 1%;
+}
+
+.width-mobile {
+  width: 2%;
+}
