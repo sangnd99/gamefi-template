@@ -18,14 +18,8 @@ const Feature: React.FC<IFeatureProps> = () => {
               className={styles["context__section"]}
               key={`feature-${randomId()}`}
             >
-              <img
-                src={image}
-                width={95}
-                height={95}
-                data-aos="zoom-in"
-                alt={title}
-              />
-              <div data-aos="fade-up" className={styles["context__wrapper"]}>
+              <img src={image} width={95} height={95} alt={title} />
+              <div className={styles["context__wrapper"]}>
                 <p className={styles["context__title"]}>{title}</p>
                 <p className={styles["context__desc"]}>{description}</p>
               </div>
