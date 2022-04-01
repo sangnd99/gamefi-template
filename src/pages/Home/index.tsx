@@ -12,14 +12,14 @@ import TokenomicsAndRoadmap from "./components/TokenomicsAndRoadmap";
 import Crew from "./components/Crew";
 
 const Home = () => {
-  useEffect(() => {
-    AOS.init({
-      duration: 500,
-      easing: "linear",
-      delay: 100,
-    });
-    AOS.refresh();
-  }, []);
+  // useEffect(() => {
+  //   AOS.init({
+  //     duration: 500,
+  //     easing: "linear",
+  //     delay: 100,
+  //   });
+  //   AOS.refresh();
+  // }, []);
   return (
     <div className={styles.container}>
       <Banner />
