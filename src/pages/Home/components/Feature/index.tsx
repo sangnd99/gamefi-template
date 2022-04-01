@@ -17,6 +17,8 @@ const Feature: React.FC<IFeatureProps> = () => {
             <div
               className={styles["context__section"]}
               key={`feature-${randomId()}`}
+              data-aos="fade-up"
+              data-aos-offset="30"
             >
               <img src={image} width={95} height={95} alt={title} />
               <div className={styles["context__wrapper"]}>

@@ -30,7 +30,7 @@ const MarketPlace: React.FC<IMarketPlaceProps> = () => {
         <div className={styles.content}>
           {listCard.map((item) => (
             <Fragment key={`item-card-${randomId()}`}>
-              <Card data={item} />
+              <Card data={item} data-aos="fade-up" data-aos-offset="30" />
             </Fragment>
           ))}
         </div>

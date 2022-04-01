@@ -11,8 +11,19 @@ const Support: React.FC<ISupportProps> = (props) => {
   return (
     <section className={styles.wrapper}>
       <div className={cn(styles.container, "container")}>
-        <img src={Intergration} width={452} height={432} alt="Intergration" />
-        <div className={styles.description}>
+        <img
+          src={Intergration}
+          width={452}
+          height={432}
+          alt="Intergration"
+          data-aos="zoom-in"
+          data-aos-offset="30"
+        />
+        <div
+          className={styles.description}
+          data-aos="fade-up"
+          data-aos-offset="30"
+        >
           <div>
             <SectionTitle text="INTEGRATION" right={true} color={true} />
             <SectionHeading text="MULTI-CHAIN SUPPORT" />

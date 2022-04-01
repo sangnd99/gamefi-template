@@ -1,4 +1,6 @@
+import Aos from "aos";
 import "aos/dist/aos.css";
+import { useEffect } from "react";
 
 import styles from "./Home.module.scss";
 
@@ -10,6 +12,14 @@ import TokenomicsAndRoadmap from "./components/TokenomicsAndRoadmap";
 import Crew from "./components/Crew";
 
 const Home = () => {
+  useEffect(() => {
+    Aos.init({
+      duration: 800,
+      easing: "linear",
+      delay: 100,
+    });
+    Aos.refresh();
+  }, []);
   return (
     <div className={styles.container}>
       <Banner />
